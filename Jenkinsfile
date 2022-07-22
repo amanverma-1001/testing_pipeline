@@ -12,7 +12,7 @@ pipeline {
           stage('Cluster login') {
             steps {
                sh 'oc login https://api.foramanverma.cp.fyre.ibm.com:6443 -u kubeadmin -p IAK7b-Ea7MB-RUGPn-MWcqI --insecure-skip-tls-verify=true'
-               sh 'oc new-project user-getting-started --display-name="Getting Started with OpenShift"'
+               sh 'oc new-project aman-test2 --display-name="Getting Started with OpenShift2"'
                sh 'oc adm policy add-role-to-user view -z default -'
                sh 'oc new-app docker.io/aman1007/react:5.0 --name=parksmap'
                sh 'oc get service'
