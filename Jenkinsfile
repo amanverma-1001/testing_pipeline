@@ -13,7 +13,7 @@ pipeline {
           stage('Image pushing to image registry')
           {
             steps{
-                sh 'ssh kubeadmin@api.foramanverma.cp.fyre.ibm.com'
+                sh 'ssh '
                 sh 'sudo su -'
                 sh 'oc project default'
                 sh 'oc get pod'
